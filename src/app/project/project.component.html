@@ -1,33 +1,12 @@
-<div>
-    <h1 class="title">{{selectedProject.title}}</h1>
-    <div>
-        <h1>UI Flow</h1>
-        <div class="image-grid">
-            <div class="grid-image" *ngFor="let image of selectedProject.imageNames">
-                <img [src]="getImageURL('ui', image)" [alt]="image" />
+<div class="container">
+    <div class="heading">
+        <app-heading heading="{{selectedProject.title}}"></app-heading>
+        <div>
+            <div class="gallery">
+                <div class="gallery-item" *ngFor="let image of selectedProject.imageNames">
+                    <img class="gallery-image" [src]="getImageURL('ui', image)" [alt]="image" />
+                </div>
             </div>
         </div>
     </div>
-
-
-
-    <div>
-        <h1>UX Flow</h1>
-        <div class="image-grid">
-            <div class="grid-image" *ngFor="let image of selectedProject.imageNames">
-                <img [src]="getImageURL('ux', image)" [alt]="image" />
-            </div>
-        </div>
-    </div>
-
-
-    <div>
-        <h1>constraints</h1>
-        <div class="image-grid">
-            <div class="grid-image" *ngFor="let image of selectedProject.imageNames">
-                <img [src]="getImageURL('ui', image)" [alt]="image" />
-            </div>
-        </div>
-    </div>
-
 </div>

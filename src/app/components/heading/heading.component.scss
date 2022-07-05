@@ -7,6 +7,10 @@
         font-size: 1.5rem;
     }
 
+    @media only screen and (max-width: 400px) {
+        font-size: 1rem;
+    }
+
     .heading {
         --height: 1.2em;
         line-height: var(--height);

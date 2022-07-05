@@ -1,9 +1,13 @@
-<app-heading heading="portfolio"></app-heading>
-<div class="image-grid">
-    <div class="grid-image" *ngFor="let project of projects">
-        <span>{{project.name}}</span>
-        <a [routerLink]="['/projects', project.link]" routerLinkActive="active">
-            <img src="{{project.thumbnail}}" />
-        </a>
+<div class="container">
+    <div class="heading">
+        <app-heading heading="my portfolio"></app-heading>
     </div>
+
+    <div class="gallery">
+        <div class="gallery-item" *ngFor="let project of projects">
+            <img class="gallery-image" [src]="project.thumbnail" [alt]="project.name"
+                [routerLink]="['/projects', project.link]" routerLinkActive="active">
+        </div>
+    </div>
+
 </div>

@@ -10,7 +10,7 @@ export class PortfolioComponent implements OnInit {
     {
       name: 'Ride Share',
       link: 'rideShare',
-      thumbnail: 'https://source.unsplash.com/random/320x240'
+      thumbnail: 'assets/images/logo/Logo.png'
     }
   ];
   constructor() { }

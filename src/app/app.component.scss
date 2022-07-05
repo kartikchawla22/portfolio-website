@@ -17,6 +17,10 @@ mat-drawer {
     margin: 16px;
     margin-left: 32px;
     border-radius: 10;
+
+    @media only screen and (max-width: 800px) {
+        margin-left: 16px;
+    }
 }
 
 mat-drawer-container {
