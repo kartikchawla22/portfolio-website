@@ -1,11 +1,11 @@
 <div class="container">
     <div class="heading">
         <app-heading heading="{{selectedProject.title}}"></app-heading>
-        <div>
-            <div class="gallery">
-                <div class="gallery-item" *ngFor="let image of selectedProject.imageNames">
-                    <img class="gallery-image" [src]="getImageURL('ui', image)" [alt]="image" />
-                </div>
+    </div>
+    <div>
+        <div class="gallery">
+            <div class="gallery-item" *ngFor="let image of selectedProject.imageNames">
+                <img class="gallery-image" [src]="getImageURL('ui', image)" [alt]="image" />
             </div>
         </div>
     </div>

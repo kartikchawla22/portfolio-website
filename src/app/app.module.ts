@@ -18,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeadingComponent } from './components/heading/heading.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ContactMeComponent } from './pages/contact-me/contact-me.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    TagCanvasModule
+    TagCanvasModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

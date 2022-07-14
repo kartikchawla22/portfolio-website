@@ -29,5 +29,4 @@ export class ProjectComponent implements OnInit {
   getImageURL(design: string, image: string): string {
     return `assets/images/projects/${this.selectedProject.name}/${design}/${image}.jpg`
   }
-
 }
