@@ -19,6 +19,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeadingComponent } from './components/heading/heading.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     HomePageComponent,
     HeadingComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

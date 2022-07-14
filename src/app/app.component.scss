@@ -1,6 +1,33 @@
 mat-toolbar {
     background: rgb(24, 23, 23);
     color: white;
+
+    .name {
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            color: silver;
+            letter-spacing: 5px;
+            cursor: pointer;
+        }
+
+        h2 span {
+            transition: 0.5s;
+        }
+
+        h2:hover span:nth-child(1) {
+            margin-right: 10px;
+        }
+
+        h2:hover span:nth-child(2) {
+            margin-left: 40px;
+        }
+
+        h2:hover span {
+            color: red;
+            text-shadow: 0 0 10px red, 0 0 40px red, 0 0 160px red;
+        }
+    }
 }
 
 mat-drawer {
@@ -10,6 +37,31 @@ mat-drawer {
     color: white;
     padding: 16px;
     text-align: center;
+
+    .profile-picture {
+        margin: 16px 0;
+        width: 100%;
+        border-radius: 50%;
+        filter: grayscale(90%);
+    }
+
+    .name {
+        margin: 16px 0;
+        color: silver;
+    }
+
+    .desigination {
+        color: silver;
+    }
+
+    button {
+        margin: 16px 0;
+    }
+
+    mat-divider {
+        margin: 16px 0;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 }
 
 .content {
@@ -41,11 +93,4 @@ mat-drawer-container {
     mat-icon {
         margin-right: 8px;
     }
-}
-
-#foo-pop {
-    position: absolute;
-    height: 70px;
-    right: 0;
-    left: 0;
 }

@@ -16,8 +16,8 @@
         line-height: var(--height);
         color: #0000;
         text-shadow:
-            0 calc(-1*var(--_t, 0em)) #000,
-            0 calc(var(--height) - var(--_t, 0em)) #1095c1;
+            0 calc(-1*var(--_t, 0em)) silver,
+            0 calc(var(--height) - var(--_t, 0em)) goldenrod;
         overflow: hidden;
         transition: .3s;
     }

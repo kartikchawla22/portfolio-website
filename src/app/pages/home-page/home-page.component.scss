@@ -65,13 +65,22 @@ div.custom-cursor:nth-of-type(6) {
         display: flex;
         justify-content: center;
         align-content: center;
-        align-items: center;
-        width: 100%;
+        max-width: 100%;
         height: 100%;
+        flex-direction: column;
 
         @media only screen and (max-width: 600px) {
             max-height: 50%;
             max-width: 100%;
+        }
+
+        .contact-me-container {
+            width: 100%;
+
+            a {
+                text-decoration: underline;
+                color: goldenrod;
+            }
         }
     }
 }

@@ -1,0 +1,155 @@
+$color1: black;
+$color2: #000000;
+$color3: white;
+$color4: silver;
+$color5: black;
+$color6: black;
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 5%;
+
+    :last-child {
+        margin-bottom: 5%;
+    }
+
+    @media screen and (max-width: 700px) {
+        margin-top: 5%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 100%;
+        // height: 90%;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            // margin-bottom: 10%;
+        }
+
+        .subheading {
+            cursor: pointer;
+            max-width: 50%;
+            justify-content: center;
+            color: silver;
+            margin-top: 15px;
+
+            @media screen and (max-width: 700px) {
+                max-width: 100%;
+                align-self: center;
+                margin-top: 0;
+            }
+        }
+
+        .skills {
+            display: flex;
+            width: 100%;
+            max-width: 50%;
+            flex-direction: column;
+            justify-content: space-between;
+            max-height: 100%;
+
+            @media screen and (max-width: 700px) {
+                max-width: 100%;
+            }
+
+            .skill-content {
+                max-height: 100%;
+
+                .skill-title {
+                    color: silver;
+                    width: 100%;
+                    margin: 5px;
+                    text-align: left;
+                    font-weight: 600;
+                    font-family: sans-serif;
+                    font-weight: 200;
+                }
+
+                .progress-bar-container {
+
+                    width: 95%;
+                    margin: 2px 0px 0px 0px;
+
+                    .progress {
+                        background: #e9e5e2;
+                        height: 5px;
+
+                        .angular,
+                        .nodejs,
+                        .reactjs,
+                        .react-native,
+                        .javascript,
+                        .mongo {
+                            width: 0;
+                            -webkit-transition: width 4.50s ease !important;
+                            -moz-transition: width 4.50s ease !important;
+                            -o-transition: width 4.50s ease !important;
+                            transition: width 4.50s ease !important;
+                        }
+
+                        .progress-bar {
+                            background-image: -webkit-linear-gradient(left, #FF7F50 0%,
+                                    #FE7D7D 100%);
+                            background-image: -moz-linear-gradient(left, #FF7F50 0%,
+                                    #FE7D7D 100%);
+                            background-image: -o-linear-gradient(left, #FF7F50 0%,
+                                    #FE7D7D 100%);
+                            background-image: linear-gradient(to right, #FF7F50 0%,
+                                    #FE7D7D 100%);
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .companies {
+        display: flex;
+        flex-direction: row;
+        color: silver;
+        justify-content: space-evenly;
+        max-height: 100%;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            // margin-bottom: 10%;
+        }
+
+        .kellton,
+        .epam {
+            max-width: 100%;
+            justify-content: center;
+            color: silver;
+            align-self: center;
+            border: 1px solid white;
+            margin: 10px;
+            padding: 10px;
+            width: 100%;
+
+            .mat-headline {
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        // .epam {
+        //     margin: 10px;
+        //     padding: 10px;
+        //     width: 100%;
+        //     height: 100%;
+        //     border: 1px solid white;
+        // }
+    }
+}

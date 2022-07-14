@@ -7,23 +7,36 @@
       close
     </mat-icon>
   </button>
-  Kartik Chawla
+  <span class="name">
+    <h2><span>K</span>artik<span>Chawla</span>
+    </h2>
+  </span>
 </mat-toolbar>
 
 <mat-drawer-container autosize>
   <mat-drawer #drawer>
+    <img class="profile-picture mat-elevation-z8" src="assets/images/profile-pic.jpg" />
+
+    <h4 class="name">Kartik Chawla</h4>
+    <p class="designation">Full Stack Developer</p>
+    <mat-divider></mat-divider>
     <button mat-button class="menu-button" [routerLink]="[ '/' ]" routerLinkActive="active">
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
-    <button mat-button class="menu-button" [routerLink]="[ '/contact' ]" routerLinkActive="active">
+    <button mat-button class="menu-button" [routerLink]="[ '/aboutme' ]" routerLinkActive="active">
       <mat-icon>person</mat-icon>
+      <span>About Myself</span>
+    </button>
+    <button mat-button class="menu-button" [routerLink]="[ '/contact' ]" routerLinkActive="active">
+      <mat-icon>contacts</mat-icon>
       <span>Contact Me</span>
     </button>
     <button mat-button class="menu-button" [routerLink]="[ '/projects' ]" routerLinkActive="active">
-      <mat-icon>person</mat-icon>
-      <span>Profile</span>
+      <mat-icon>computer</mat-icon>
+      <span>Projects</span>
     </button>
+    <mat-divider></mat-divider>
   </mat-drawer>
 
   <div class="content" [@triggerName]="prepareRoute(outlet)">
