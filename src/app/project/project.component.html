@@ -2,7 +2,21 @@
     <div class="heading">
         <app-heading heading="{{selectedProject.title}}"></app-heading>
     </div>
-    <div>
+    <div class="content">
+        <div class="project mat-typography">
+            <div class="project-description">
+                <h1 class="mat-headline">
+                    {{selectedProject.description}}
+                </h1>
+            </div>
+            <div class="project-details">
+
+                <div class="details" *ngFor="let item of selectedProject.details">
+                    <h2 class="key mat-title">{{item.key}}</h2>
+                    <h1 class="value mat-headline">{{item.value}}</h1>
+                </div>
+            </div>
+        </div>
         <div class="gallery">
             <div class="gallery-item" *ngFor="let image of selectedProject.imageNames">
                 <img class="gallery-image" [src]="getImageURL('ui', image)" [alt]="image" />

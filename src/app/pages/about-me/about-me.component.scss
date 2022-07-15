@@ -1,10 +1,3 @@
-$color1: black;
-$color2: #000000;
-$color3: white;
-$color4: silver;
-$color5: black;
-$color6: black;
-
 .outer-container {
     display: flex;
     flex-direction: column;
@@ -25,13 +18,11 @@ $color6: black;
         flex-direction: row;
         justify-content: space-between;
         max-height: 100%;
-        // height: 90%;
 
         @media screen and (max-width: 700px) {
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            // margin-bottom: 10%;
         }
 
         .subheading {
@@ -40,6 +31,7 @@ $color6: black;
             justify-content: center;
             color: silver;
             margin-top: 15px;
+            margin-right: 1%;
 
             @media screen and (max-width: 700px) {
                 max-width: 100%;
@@ -143,13 +135,5 @@ $color6: black;
                 text-transform: uppercase;
             }
         }
-
-        // .epam {
-        //     margin: 10px;
-        //     padding: 10px;
-        //     width: 100%;
-        //     height: 100%;
-        //     border: 1px solid white;
-        // }
     }
 }

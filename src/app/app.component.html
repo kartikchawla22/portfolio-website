@@ -20,7 +20,8 @@
     <h4 class="name">Kartik Chawla</h4>
     <p class="designation">Full Stack Developer</p>
     <mat-divider></mat-divider>
-    <button mat-button class="menu-button" [routerLink]="[ '/' ]" routerLinkActive="active">
+    <button mat-button class="menu-button" [routerLink]="[ '/' ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+      true}">
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
