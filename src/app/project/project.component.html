@@ -8,6 +8,10 @@
                 <h1 class="mat-headline">
                     {{selectedProject.description}}
                 </h1>
+                <h1 class="mat-headline" *ngIf="selectedProject.figma">
+                    The Figma for this project can be found <a class="link" [href]="selectedProject.figma"
+                        target="_blank">here</a>
+                </h1>
             </div>
             <div class="project-details">
 
@@ -19,7 +23,7 @@
         </div>
         <div class="gallery">
             <div class="gallery-item" *ngFor="let image of selectedProject.imageNames">
-                <img class="gallery-image" [src]="getImageURL('ui', image)" [alt]="image" />
+                <img class="gallery-image" [src]="getImageURL(image)" [alt]="image" />
             </div>
         </div>
     </div>

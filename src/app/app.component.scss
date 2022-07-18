@@ -27,6 +27,24 @@ mat-toolbar {
             color: red;
             text-shadow: 0 0 10px red, 0 0 40px red, 0 0 160px red;
         }
+
+        @media screen and (max-width: 600px) {
+            h2 {
+                font-size: 1em;
+                font-weight: bold;
+                color: silver;
+                letter-spacing: 2.5px;
+                cursor: pointer;
+            }
+
+            h2:hover span:nth-child(1) {
+                margin-right: 5px;
+            }
+
+            h2:hover span:nth-child(2) {
+                margin-left: 20px;
+            }
+        }
     }
 }
 

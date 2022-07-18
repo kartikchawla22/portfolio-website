@@ -10,7 +10,22 @@ export class PortfolioComponent implements OnInit {
     {
       name: 'Ride Share',
       link: 'rideShare',
-      thumbnail: 'assets/images/logo/Logo.png'
+      thumbnail: 'assets/images/logo/rideShareLogo.png'
+    },
+    {
+      name: 'Georgian Connect',
+      link: 'georgianConnect',
+      thumbnail: 'assets/images/logo/georgianConnectLogo.png'
+    },
+    {
+      name: 'Maths Fun',
+      link: 'mathsFun',
+      thumbnail: 'assets/images/logo/mathsFun.png'
+    },
+    {
+      name: 'Maths Fun',
+      link: 'mathsFunIOS',
+      thumbnail: 'assets/images/logo/mathsFun.png'
     }
   ];
   constructor() { }
