@@ -15,10 +15,10 @@ export class ContactMeComponent implements OnInit {
 
   ngOnInit(): void {
     this.emailFrom = new FormGroup({
-      email: new FormControl("shalini.ichha@gmail.com", [Validators.required, Validators.email]),
+      email: new FormControl(null, [Validators.required, Validators.email]),
       message: new FormControl(null, [Validators.required]),
-      name: new FormControl("Testing", [Validators.required, Validators.pattern(/^([a-zA-Z])*$/)]),
-      subject: new FormControl("Test message", [Validators.required]),
+      name: new FormControl(null, [Validators.required, Validators.pattern(/^([a-zA-Z])*$/)]),
+      subject: new FormControl(null, [Validators.required]),
     })
   }
 
