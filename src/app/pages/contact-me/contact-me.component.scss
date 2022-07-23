@@ -30,13 +30,41 @@
 
         .name-email-block {
             display: flex;
+            max-width: 100%;
+            justify-content: space-between;
 
             @media only screen and (max-width: 600px) {
                 flex-direction: column;
                 max-width: 100%;
             }
+
+            .input-error-block {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+
+                @media only screen and (max-width: 600px) {
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
         }
 
+        .input-error-block {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .hasError {
+                border: 1px solid red;
+            }
+
+            .error {
+                margin-left: 10px;
+                color: red;
+                font-size: 11px;
+            }
+        }
     }
 
     .input-field {

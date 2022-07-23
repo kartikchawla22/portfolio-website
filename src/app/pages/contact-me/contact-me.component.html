@@ -1,14 +1,38 @@
 <div class="container">
 
     <app-heading heading="Contact ME"></app-heading>
-    <form class="form-container">
+    <form class="form-container" (submit)="sendEmail()" [formGroup]="emailFrom">
         <div class="name-email-block">
-            <input class="input-field" type="text" placeholder="Name">
-
-            <input class="input-field" type="email" placeholder="Email Address">
+            <div class="input-error-block">
+                <input [class.hasError]="isformSubmited && !!emailFrom.get('name')?.errors" class="input-field"
+                    type="text" placeholder="Name" formControlName="name">
+                <span *ngIf="isformSubmited && emailFrom.get('name')?.hasError('required')" class="error">This Field is
+                    required</span>
+                <span *ngIf="isformSubmited && emailFrom.get('name')?.hasError('pattern')" class="error">Enter a Valid
+                    name</span>
+            </div>
+            <div class="input-error-block">
+                <input [class.hasError]="isformSubmited && !!emailFrom.get('email')?.errors" class="input-field"
+                    type="email" placeholder="Email Address" formControlName="email">
+                <span *ngIf="isformSubmited && emailFrom.get('email')?.hasError('required')" class="error">This Field is
+                    required</span>
+                <span *ngIf="isformSubmited && emailFrom.get('email')?.hasError('email')" class="error">Enter a Valid
+                    Email</span>
+            </div>
         </div>
-        <input class="input-field" type="text" placeholder="Subject">
-        <textarea class="input-field" type="text" placeholder="message"></textarea>
+        <div class="input-error-block">
+            <input [class.hasError]="isformSubmited && !!emailFrom.get('subject')?.errors" class="input-field"
+                type="text" placeholder="Subject" formControlName="subject">
+            <span *ngIf="isformSubmited && emailFrom.get('subject')?.hasError('required')" class="error">This Field is
+                required</span>
+        </div>
+        <div class="input-error-block">
+            <textarea [class.hasError]="isformSubmited && !!emailFrom.get('message')?.errors" class="input-field"
+                type="text" placeholder="message" formControlName="message"></textarea>
+            <span *ngIf="isformSubmited && emailFrom.get('message')?.hasError('required')" class="error">This Field is
+                required</span>
+        </div>
+
         <input class="input-field" type="submit" value="Submit">
     </form>
 </div>

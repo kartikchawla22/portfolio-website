@@ -20,6 +20,8 @@ import { HeadingComponent } from './components/heading/heading.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,10 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
     MatIconModule,
     MatDividerModule,
     TagCanvasModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

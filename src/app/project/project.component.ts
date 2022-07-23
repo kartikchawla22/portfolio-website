@@ -27,10 +27,11 @@ export class ProjectComponent implements OnInit {
           key: "Fonts:", value: "System"
         },
         {
-          key: "Platforms:", value: "Androind, iOS"
+          key: "Platforms:", value: "Android, iOS"
         }
       ],
-      figma: "https://www.figma.com/file/kMuEompTIXboIc5ufASy3F/Ride-Share"
+      figma: "https://www.figma.com/file/kMuEompTIXboIc5ufASy3F/Ride-Share",
+      colorScheme: ["#5cb074", "#015c9a", "#ffffff", "#000000"]
     },
     georgianConnect: {
       imageNames: ['Georgian Connect-01', 'Georgian Connect-02', 'Georgian Connect-03', 'Georgian Connect-04', 'Georgian Connect-05', 'Georgian Connect-06', 'Georgian Connect-07', 'Georgian Connect-08', 'Georgian Connect-09', 'Georgian Connect-10'],
@@ -48,10 +49,11 @@ export class ProjectComponent implements OnInit {
           key: "Fonts:", value: "System"
         },
         {
-          key: "Platforms:", value: "Androind, iOS"
+          key: "Platforms:", value: "Android, iOS"
         }
       ],
-      figma: "https://www.figma.com/file/23q2ihPV7PBoRCnnAwALOb/Georgian-Connect"
+      figma: "https://www.figma.com/file/23q2ihPV7PBoRCnnAwALOb/Georgian-Connect",
+      colorScheme: ["#5cb074", "#015c9a", "#ffffff", "#000000"]
     },
     mathsFun: {
       imageNames: ['Maths Fun-01', 'Maths Fun-02', 'Maths Fun-03', 'Maths Fun-04', 'Maths Fun-05', 'Maths Fun-06', 'Maths Fun-07', 'Maths Fun-08'],
@@ -72,7 +74,8 @@ export class ProjectComponent implements OnInit {
           key: "Platforms:", value: "Android"
         }
       ],
-      figma: "hhttps://www.figma.com/file/xXyQ28w9WaDtIPDLbwQU97/Maths-fun"
+      figma: "hhttps://www.figma.com/file/xXyQ28w9WaDtIPDLbwQU97/Maths-fun",
+      colorScheme: ["#5cb074", "#015c9a", "#ffffff", "#000000"]
     },
     mathsFunIOS: {
       imageNames: ['Maths Fun-01', 'Maths Fun-02', 'Maths Fun-03', 'Maths Fun-04', 'Maths Fun-05', 'Maths Fun-06', 'Maths Fun-07', 'Maths Fun-08'],
@@ -93,7 +96,8 @@ export class ProjectComponent implements OnInit {
           key: "Platforms:", value: "iOS"
         }
       ],
-      figma: "hhttps://www.figma.com/file/xXyQ28w9WaDtIPDLbwQU97/Maths-fun"
+      figma: "hhttps://www.figma.com/file/xXyQ28w9WaDtIPDLbwQU97/Maths-fun",
+      colorScheme: ["#5cb074", "#015c9a", "#ffffff", "#000000", "#432678"]
     }
   }
   constructor(private _route: ActivatedRoute) { }

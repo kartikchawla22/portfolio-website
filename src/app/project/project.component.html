@@ -12,6 +12,17 @@
                     The Figma for this project can be found <a class="link" [href]="selectedProject.figma"
                         target="_blank">here</a>
                 </h1>
+                <h1 class="mat-headline">
+                    Color Scheme used in this project:
+                </h1>
+                <div class="colors">
+                    <div class="details" *ngFor="let item of selectedProject?.colorScheme">
+                        <h1 class="value mat-headline">
+                            <span [ngStyle]="{background: item}" class="color-pallet"></span>
+                            {{item}}
+                        </h1>
+                    </div>
+                </div>
             </div>
             <div class="project-details">
 

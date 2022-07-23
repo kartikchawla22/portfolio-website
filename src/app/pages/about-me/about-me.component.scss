@@ -105,35 +105,48 @@
 
     }
 
-    .companies {
-        display: flex;
-        flex-direction: row;
-        color: silver;
-        justify-content: space-evenly;
-        max-height: 100%;
+    .history-container {
 
-        @media screen and (max-width: 700px) {
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            // margin-bottom: 10%;
-        }
-
-        .kellton,
-        .epam {
-            max-width: 100%;
-            justify-content: center;
+        .companies {
+            display: flex;
+            flex-direction: row;
             color: silver;
-            align-self: center;
-            border: 1px solid white;
-            margin: 10px;
-            padding: 10px;
-            width: 100%;
+            justify-content: space-evenly;
+            max-height: 100%;
 
-            .mat-headline {
-                text-align: center;
-                text-transform: uppercase;
+            @media screen and (max-width: 700px) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                // margin-bottom: 10%;
+            }
+
+            .kellton,
+            .mau,
+            .georgian,
+            .epam {
+                max-width: 100%;
+                justify-content: center;
+                color: silver;
+                align-self: center;
+                border: 1px solid white;
+                margin: 10px;
+                padding: 10px;
+                width: 100%;
+
+                .mat-headline {
+                    text-align: center;
+                    text-transform: uppercase;
+                }
             }
         }
+
+        .heading {
+            &.center {
+                text-align: center;
+            }
+        }
+
     }
+
 }
