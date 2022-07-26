@@ -27,8 +27,9 @@
                 required</span>
         </div>
         <div class="input-error-block">
-            <textarea [class.hasError]="isformSubmited && !!emailFrom.get('message')?.errors" class="input-field"
-                type="text" placeholder="message" formControlName="message"></textarea>
+            <textarea [class.hasError]="isformSubmited && !!emailFrom.get('message')?.errors"
+                class="input-field messageTextarea" type="text" placeholder="message"
+                formControlName="message"></textarea>
             <span *ngIf="isformSubmited && emailFrom.get('message')?.hasError('required')" class="error">This Field is
                 required</span>
         </div>

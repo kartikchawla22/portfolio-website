@@ -7,7 +7,7 @@
       close
     </mat-icon>
   </button>
-  <span class="name">
+  <span class="name" [routerLink]="[ '/' ]">
     <h2><span>K</span>artik<span>Chawla</span>
     </h2>
   </span>
@@ -18,7 +18,7 @@
     <img class="profile-picture mat-elevation-z8" src="assets/images/profile-pic.jpg" />
 
     <h4 class="name">Kartik Chawla</h4>
-    <p class="designation">Full Stack Developer</p>
+    <p class="desigination">Full Stack Developer</p>
     <mat-divider></mat-divider>
     <button mat-button class="menu-button" [routerLink]="[ '/' ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
       true}">
