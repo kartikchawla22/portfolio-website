@@ -36,4 +36,38 @@
     .gallery-image:hover {
         transform: scale(1.15);
     }
+
+    .content {
+        display: flex;
+        justify-content: center;
+
+        .main-content {
+            width: 100%;
+            color: silver;
+            align-self: center;
+
+            .roles {
+                padding: 10px;
+
+                .block {
+                    border: 1px solid white;
+                    padding: 10px;
+
+                    margin: 20px 0;
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            margin: 10px;
+
+                            &::before {
+                                content: "-";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
