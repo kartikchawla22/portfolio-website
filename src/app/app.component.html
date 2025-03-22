@@ -1,51 +1,19 @@
-<mat-toolbar>
-  <button mat-icon-button *ngIf="drawer && drawer.mode === 'over'" (click)="drawer.toggle()">
-    <mat-icon *ngIf="!drawer.opened">
-      menu
-    </mat-icon>
-    <mat-icon *ngIf="drawer.opened">
-      close
-    </mat-icon>
-  </button>
-  <span class="name" [routerLink]="[ '/' ]">
-    <h2><span>K</span>artik<span>Chawla</span>
-    </h2>
-  </span>
-</mat-toolbar>
+<!-- <app-main-scroll-page> -->
+<main role="main">
+  <header>
+    <div class="title">
+      <app-home></app-home>
+      <div class="mouse-scroll-container">
+        <app-mouse></app-mouse>
+      </div>
+    </div>
+  </header>
 
-<mat-drawer-container autosize>
-  <mat-drawer #drawer>
-    <img class="profile-picture mat-elevation-z8" src="assets/images/profile-pic.jpg" />
-
-    <h4 class="name">Kartik Chawla</h4>
-    <p class="desigination">Full Stack Developer</p>
-    <mat-divider></mat-divider>
-    <button mat-button class="menu-button" [routerLink]="[ '/' ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-      true}">
-      <mat-icon>home</mat-icon>
-      <span>Home</span>
-    </button>
-    <button mat-button class="menu-button" [routerLink]="[ '/aboutme' ]" routerLinkActive="active">
-      <mat-icon>person</mat-icon>
-      <span>About Myself</span>
-    </button>
-    <!-- <button mat-button class="menu-button" [routerLink]="[ '/contact' ]" routerLinkActive="active">
-      <mat-icon>contacts</mat-icon>
-      <span>Contact Me</span>
-    </button> -->
-    <button mat-button class="menu-button" [routerLink]="[ '/projects' ]" routerLinkActive="active">
-      <mat-icon>computer</mat-icon>
-      <span>Projects</span>
-    </button>
-    <mat-divider></mat-divider>
-  </mat-drawer>
-
-  <div class="content" [@triggerName]="prepareRoute(outlet)">
-    <section>
-      <router-outlet #outlet="outlet"></router-outlet>
-    </section>
-    <app-footer></app-footer>
-  </div>
-
-
-</mat-drawer-container>
+  <section>
+    <app-home-page></app-home-page>
+  </section>
+  <section>
+    <app-about-me></app-about-me>
+  </section>
+</main>
+<!-- </app-main-scroll-page> -->

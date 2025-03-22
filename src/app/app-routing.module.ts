@@ -10,35 +10,35 @@ const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
-    data: { animationState: 'home' }
+    data: { animationState: 'home' },
   },
   {
     path: 'projects',
     component: PortfolioComponent,
-    data: { animationState: 'portfolio' }
+    data: { animationState: 'portfolio' },
   },
   {
     path: 'contact',
     component: ContactMeComponent,
-    data: { animationState: 'contact' }
+    data: { animationState: 'contact' },
   },
   {
     path: 'projects/:project',
-    component: ProjectComponent
+    component: ProjectComponent,
   },
   {
     path: 'aboutme',
     component: AboutMeComponent,
-    data: { animationState: 'aboutme' }
+    data: { animationState: 'aboutme' },
   },
   {
     path: '**',
-    redirectTo: ''
-  }
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,31 +1,43 @@
-import { AfterContentInit, AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+  styleUrls: ['./about-me.component.scss'],
 })
-export class AboutMeComponent implements OnInit, AfterViewInit {
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  ngAfterViewInit(): void {
-
-
-    let angular = document.querySelector('.angular') as HTMLElement;
-    let nodejs = document.querySelector('.nodejs') as HTMLElement;
-    let mongo = document.querySelector('.mongo') as HTMLElement;
-    let reactjs = document.querySelector('.reactjs') as HTMLElement;
-    let reactNative = document.querySelector('.react-native') as HTMLElement;
-    let javascript = document.querySelector('.javascript') as HTMLElement;
-    setTimeout(() => {
-      javascript.style.width = "95%";
-      angular.style.width = "90%";
-      nodejs.style.width = "80%";
-      mongo.style.width = "80%";
-      reactjs.style.width = "50%";
-      reactNative.style.width = "50%";
-    })
-  }
+export class AboutMeComponent implements OnInit {
+  constructor() {}
+  jobs = [
+    {
+      heading: 'Senior Sofware Engineer',
+      organisation: 'EPAM Systems',
+      duration: 'April 2021 - April 2022',
+      rolesAndResponsibilities: [
+        'Developed CDX library for smooth integration among multiple products',
+        'Created seamless UI for multiple projects using Angular(2+).',
+        'Used Angular Material to build responsive web applications.',
+        'Build Lambda functions using Node JS.',
+        'Helped in building a strong UI Team by taking multiple interviews.',
+      ],
+    },
+    {
+      heading: 'MEAN Stack Developer',
+      organisation: 'Kellton Tech Solutions Ltd.',
+      duration: 'Feb 2017 - April 2021',
+      rolesAndResponsibilities: [
+        'Developed and Shipped many JavaScript based products.',
+        'Communicated with multiple clients directly for requirement gathering and development.',
+        'Managed multiple teams as a lead.',
+        'Worked on Multiple projects simultaneously in different time zones (UK and US), as a single resource.',
+        'Setup AGILE methodology in a project acting as SCRUM Master and organising all AGILE meetings (Goorming/Planning/Retrospective).',
+      ],
+    },
+  ];
+  ngOnInit(): void {}
 }

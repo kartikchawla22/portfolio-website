@@ -1,183 +1,66 @@
-<div class="heading">
-    <app-heading heading="Me, Myself and I"></app-heading>
+<div class="heading center">
+  <app-heading heading="About ME"></app-heading>
 </div>
 <div class="outer-container mat-typography">
-    <div class="container">
-        <div class="subheading">
-            <h1 class="mat-headline">
-                Meticulous Software Engineer with 5 years of experience designing, testing and developing software
-                solutions. In
-                depth understanding of web technologies with focus on delivering innovative business solutions. Excels
-                in
-                fast-paced, high-energy and deadline-driven environment with willingness to take on additional tasks.
-            </h1>
-        </div>
-        <div class="skills">
-            <div class="skill-content">
-                <h3 class="skill-title">JavaScript</h3>
-                <div class="progress-bar-container">
-                    <div class="progress">
-                        <div class="javascript progress-bar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-content">
-                <h3 class="skill-title">Angular</h3>
-                <div class="progress-bar-container">
-                    <div class="progress">
-                        <div class="angular progress-bar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-content">
-                <h3 class="skill-title">Node.JS</h3>
-                <div class="progress-bar-container">
-                    <div class="progress">
-                        <div class="nodejs progress-bar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-content">
-                <h3 class="skill-title">Mongo</h3>
-                <div class="progress-bar-container">
-                    <div class="progress">
-                        <div class="mongo progress-bar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-content">
-                <h3 class="skill-title">React.js</h3>
-                <div class="progress-bar-container">
-                    <div class="progress">
-                        <div class="reactjs progress-bar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-content">
-                <h3 class="skill-title">React-Native</h3>
-                <div class="progress-bar-container">
-                    <div class="progress">
-                        <div class="react-native progress-bar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="subheading">
+      <h1 class="mat-headline">
+        Highly analytical, efficient full-stack developer with experience in
+        MEAN, MERN, UX/UI, AWS, GCP, Heroku and RESTful APIs. Excels at
+        analyzing business requirements, creating technical solutions and
+        collaborating with stakeholders while working within Agile, cross-
+        functional teams. Committed to driving innovative improvements in
+        software applications, Continuous Integration/Continuous Deployment
+        (CI/CD) and company processes to optimize efficiency.
+      </h1>
     </div>
-    <div class="history-container">
-        <div class="heading center">
-            <app-heading heading="Previous jobs"></app-heading>
-        </div>
-        <div class="companies">
-            <div class="kellton">
-                <h1 class="mat-headline">
-                    MEAN Stack Developer
-                </h1>
-                <div class="mat-body-1">
-                    Kellton Tech Solutions Ltd.
-                </div>
-                <div class="mat-body-1">
-                    Feb 2017 - April 2021
-                </div>
-                <div class="roles">
-                    <ul>
-                        <li>
-                            Developed and Shipped many JavaScript based products.
-                        </li>
-                        <li>
-                            Communicated with multiple clients directly for requirement gathering and development.
-                        </li>
-                        <li>
-                            Managed multiple teams as a lead.
-                        </li>
-                        <li>
-                            Worked on Multiple projects simultaneously in different time zones (UK and US), as a single
-                            resource.
-                        </li>
-                        <li>
-                            Setup AGILE methodology in a project acting as SCRUM Master and organising all AGILE
-                            meetings (Goorming/Planning/Retrospective).
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="epam">
-                <h1 class="mat-headline">
-                    FrontEnd Developer
-                </h1>
-                <div class="mat-body-1">
-                    EPAM Systems
-                </div>
-                <div class="mat-body-1">
-                    April 2021 - April 2022
-                </div>
-                <div class="roles">
-                    <ul>
-                        <li>
-                            Developed CDX library for smooth integration among multiple products
-                        </li>
-                        <li>
-                            Created seamless UI for multiple projects using Angular(2+).
-                        </li>
-                        <li>
-                            Upgraded old projects to the latest angularversion.
-                        </li>
-                        <li>
-                            Used Angular Material to build responsive web applications.
-                        </li>
-                        <li>
-                            Build Lambda functions using Node JS.
-                        </li>
-                        <li>
-                            Helped in building a strong UI Team by taking multiple interviews.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  </div>
+
+  <div class="history-container">
+    <div class="heading center">
+      <app-heading heading="Previous jobs"></app-heading>
     </div>
-
-
-
-    <div class="history-container">
-
-        <div class="heading center">
-            <app-heading heading="Education"></app-heading>
+    <div class="companies">
+      <div *ngFor="let job of jobs" class="company">
+        <h1 class="mat-headline">
+          {{ job.heading }}
+        </h1>
+        <div class="mat-body-1">
+          {{ job.organisation }}
         </div>
-        <div class="companies">
-            <div class="mau">
-                <h1 class="mat-headline">
-                    B.Tech C.S.E.
-                </h1>
-                <div class="mat-body-1">
-                    Maharaja Agrasen University
-                </div>
-                <div class="mat-body-1">
-                    August 2013 - May 2017
-                </div>
-                <div class="mat-body-1">
-                    Completed my Engineering Degree in Computer Science.
-                </div>
-            </div>
-            <div class="georgian">
-                <h1 class="mat-headline">
-                    Mobile Applications Development
-                </h1>
-                <div class="mat-body-1">
-                    Georgian College
-                </div>
-                <div class="mat-body-1">
-                    May 2022 - persuing
-                </div>
-                <div>
-                    Learning about mobile applications
-                </div>
-            </div>
+        <div class="mat-body-1">
+          {{ job.duration }}
         </div>
+        <div class="roles">
+          <ul>
+            <li *ngFor="let role of job.rolesAndResponsibilities">
+              {{ role }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="history-container">
+    <div class="heading center">
+      <app-heading heading="Education"></app-heading>
+    </div>
+    <div class="companies">
+      <div class="mau">
+        <h1 class="mat-headline">B.Tech C.S.E.</h1>
+        <div class="mat-body-1">Maharaja Agrasen University</div>
+        <div class="mat-body-1">August 2013 - May 2017</div>
+        <div class="mat-body-1">
+          Completed my Engineering Degree in Computer Science.
+        </div>
+      </div>
+      <div class="georgian">
+        <h1 class="mat-headline">Mobile Applications Development</h1>
+        <div class="mat-body-1">Georgian College</div>
+        <div class="mat-body-1">May 2022 - persuing</div>
+        <div>Learning about mobile applications</div>
+      </div>
+    </div>
+  </div>
 </div>

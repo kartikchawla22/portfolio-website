@@ -1,34 +1,30 @@
-import { AfterViewInit, Component } from '@angular/core';
-
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent implements AfterViewInit {
-  drawer!: any
-  topBar!: any;
-  circles: any;
-  circleContainer: any;
   ngAfterViewInit(): void {
-    this.circleContainer = document.querySelector(".cursor-container");
-    this.circles = document.querySelectorAll(".custom-cursor");
-    this.topBar = document.querySelector('mat-toolbar');
-    this.drawer = document.querySelector('mat-drawer');
-    setInterval(() => {
-      (this.circleContainer as HTMLElement).style.opacity = (this.circleContainer as HTMLElement).style.opacity as any > 0 ? `${(this.circleContainer as HTMLElement).style.opacity as any - 0.1
-        }` : "0"
-    }, 100)
-  }
-
-  onMouseMove(e: any) {
-    (this.circleContainer as HTMLElement).style.opacity = '1'
-    this.circles.forEach((circle: any, index: number) => {
-      setTimeout(() => {
-        (circle as HTMLElement).style.left = `${e.clientX - (circle.clientWidth / 2) - 200}px`;
-        (circle as HTMLElement).style.top = `${e.clientY - (circle.clientHeight / 2) - this.topBar?.clientHeight}px`;
-      }, index * 30);
+    let angular = document.querySelector('.angular') as HTMLElement;
+    let nodejs = document.querySelector('.nodejs') as HTMLElement;
+    let mongo = document.querySelector('.mongo') as HTMLElement;
+    let reactjs = document.querySelector('.reactjs') as HTMLElement;
+    let reactNative = document.querySelector('.react-native') as HTMLElement;
+    let javascript = document.querySelector('.javascript') as HTMLElement;
+    setTimeout(() => {
+      javascript.style.width = '95%';
+      angular.style.width = '90%';
+      nodejs.style.width = '80%';
+      mongo.style.width = '80%';
+      reactjs.style.width = '50%';
+      reactNative.style.width = '50%';
     });
   }
 }

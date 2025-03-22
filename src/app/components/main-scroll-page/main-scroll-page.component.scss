@@ -1,0 +1,36 @@
+.zoom {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  // background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/dark-house_9NRF8XPDPJ.jpg);
+  background-size: 100%;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // filter: grayscale(100%);
+  background: #000;
+
+  .title {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    text-align: justify;
+  }
+  .zoom {
+    overflow: hidden;
+    padding-bottom: 60%;
+  }
+}

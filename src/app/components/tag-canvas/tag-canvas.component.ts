@@ -4,7 +4,7 @@ import { Tag } from 'ng-tagcanvas';
 @Component({
   selector: 'app-tag-canvas',
   templateUrl: './tag-canvas.component.html',
-  styleUrls: ['./tag-canvas.component.scss']
+  styleUrls: ['./tag-canvas.component.scss'],
 })
 export class TagCanvasComponent implements AfterViewInit {
   topBar!: any;
@@ -28,12 +28,12 @@ export class TagCanvasComponent implements AfterViewInit {
   ];
   options: TagCanvasOptions = {
     weight: true,
-    outlineColour: "transparent",
+    outlineColour: 'transparent',
     initial: [0.1, 0],
     shuffleTags: true,
     minSpeed: 10,
     pinchZoom: false,
-    wheelZoom: false
+    wheelZoom: false,
   };
   tagClicked(tag: any) {
     console.log(tag);
@@ -42,7 +42,9 @@ export class TagCanvasComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.topBar = document.querySelector('mat-toolbar');
     const canvas = document.querySelector('tag-canvas > canvas') as any;
-    canvas.width = '500';
-    canvas.height = '500';
+    if (canvas) {
+      canvas.width = '500';
+      canvas.height = '500';
+    }
   }
 }

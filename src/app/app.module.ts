@@ -22,6 +22,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MainScrollPageComponent } from './components/main-scroll-page/main-scroll-page.component';
+import { MouseComponent } from './components/mouse/mouse.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomePageComponent,
     HeadingComponent,
     ContactMeComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    MainScrollPageComponent,
+    MouseComponent
   ],
   imports: [
     BrowserModule,

@@ -1,86 +1,110 @@
 .container {
-    height: 100%;
-    width: 100%;
-}
-
-.cursor-container {
-    display: none;
-
-    @media only screen and (min-width: 800px) {
-        display: block;
-    }
-}
-
-div.custom-cursor {
-    width: 20px;
-    height: 20px;
-    background: rgb(231, 21, 21);
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    box-shadow: 0 0 7px rgb(231, 21, 21),
-        0 0 10px rgb(209, 32, 13),
-        0 0 21px rgba(206, 9, 9, 0.823),
-        0 0 42px rgb(231, 63, 21),
-        0 0 82px rgb(119, 13, 13),
-        0 0 92px rgb(231, 21, 21),
-        0 0 102px rgb(231, 21, 21),
-        0 0 151px rgb(231, 21, 21);
-}
-
-div.custom-cursor:nth-of-type(2) {
-    transform: scale(0.8);
-}
-
-div.custom-cursor:nth-of-type(3) {
-    transform: scale(0.6);
-}
-
-div.custom-cursor:nth-of-type(4) {
-    transform: scale(0.4);
-}
-
-div.custom-cursor:nth-of-type(5) {
-    transform: scale(0.2);
-}
-
-div.custom-cursor:nth-of-type(6) {
-    transform: scale(0.1);
-}
-
-.felx-content {
+  height: 100vh;
+  width: 100%;
+  .felx-content {
     font-size: 2rem;
     color: lightgray;
     display: inline-flex;
-    justify-content: space-between;
-    cursor: none;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     flex-direction: row;
-
+    height: 100%;
     @media only screen and (max-width: 600px) {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     .main-content {
-        display: flex;
-        justify-content: center;
-        align-content: center;
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      max-width: 100%;
+      height: 100%;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      @media only screen and (max-width: 600px) {
+        max-height: 50%;
         max-width: 100%;
-        height: 100%;
-        flex-direction: column;
+      }
+      .skills-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        .skills {
+          display: flex;
+          width: 100%;
+          max-width: 50%;
+          flex-direction: column;
+          justify-content: space-between;
+          max-height: 100%;
 
-        @media only screen and (max-width: 600px) {
-            max-height: 50%;
+          @media screen and (max-width: 700px) {
             max-width: 100%;
-        }
+          }
 
-        .contact-me-container {
-            width: 100%;
+          .skill-content {
+            max-height: 100%;
 
-            a {
-                text-decoration: underline;
-                color: goldenrod;
+            .skill-title {
+              color: silver;
+              width: 100%;
+              margin: 5px;
+              text-align: left;
+              font-weight: 600;
+              font-family: sans-serif;
+              font-weight: 200;
             }
+
+            .progress-bar-container {
+              width: 95%;
+              margin: 2px 0px 0px 0px;
+
+              .progress {
+                background: #e9e5e2;
+                height: 5px;
+
+                .angular,
+                .nodejs,
+                .reactjs,
+                .react-native,
+                .javascript,
+                .mongo {
+                  width: 0;
+                  -webkit-transition: width 4.5s ease !important;
+                  -moz-transition: width 4.5s ease !important;
+                  -o-transition: width 4.5s ease !important;
+                  transition: width 4.5s ease !important;
+                }
+
+                .progress-bar {
+                  background-image: -webkit-linear-gradient(
+                    left,
+                    #e0d15a 0%,
+                    #f7de1e 100%
+                  );
+                  background-image: -moz-linear-gradient(
+                    left,
+                    #e0d15a 0%,
+                    #f7de1e 100%
+                  );
+                  background-image: -o-linear-gradient(
+                    left,
+                    #e0d15a 0%,
+                    #f7de1e 100%
+                  );
+                  background-image: linear-gradient(
+                    to right,
+                    #e0d15a 0%,
+                    #f7de1e 100%
+                  );
+                  height: 100%;
+                }
+              }
+            }
+          }
         }
+      }
     }
+  }
 }
